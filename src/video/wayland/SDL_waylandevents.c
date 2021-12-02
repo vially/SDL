@@ -398,8 +398,8 @@ pointer_handle_motion(void *data, struct wl_pointer *pointer,
     if (input->pointer_focus) {
         const float sx_f = (float)wl_fixed_to_double(sx_w);
         const float sy_f = (float)wl_fixed_to_double(sy_w);
-        const int   sx   = (int)SDL_floorf(sx_f * window->pointer_scale_x);
-        const int   sy   = (int)SDL_floorf(sy_f * window->pointer_scale_y);
+        const int   sx   = (int)SDL_floorf(sx_f * window->pointer_scale_x * window->scale_factor);
+        const int   sy   = (int)SDL_floorf(sy_f * window->pointer_scale_y * window->scale_factor);
         SDL_SendMouseMotion(window->sdlwindow, 0, 0, sx, sy);
     }
 }

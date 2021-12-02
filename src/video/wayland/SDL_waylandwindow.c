@@ -441,7 +441,7 @@ SetFullscreen(SDL_Window *window, struct wl_output *output, SDL_bool commit)
             wl_surface_commit(wind->surface);
         }
         if (output) {
-            xdg_toplevel_set_fullscreen(wind->shell_surface.xdg.roleobj.toplevel, output);
+            xdg_toplevel_set_fullscreen(wind->shell_surface.xdg.roleobj.toplevel, NULL);
         } else {
             xdg_toplevel_unset_fullscreen(wind->shell_surface.xdg.roleobj.toplevel);
         }
