@@ -1549,6 +1549,8 @@ SDL_CreateWindow(const char *title, int x, int y, int w, int h, Uint32 flags)
     SDL_Window *window;
     Uint32 graphics_flags = flags & (SDL_WINDOW_OPENGL | SDL_WINDOW_METAL | SDL_WINDOW_VULKAN);
 
+    flags |= SDL_WINDOW_ALLOW_HIGHDPI;
+
     if (!_this) {
         /* Initialize the video system if needed */
         if (SDL_Init(SDL_INIT_VIDEO) < 0) {
