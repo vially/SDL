@@ -2292,10 +2292,10 @@ SDL_GetWindowSize(SDL_Window * window, int *w, int *h)
 {
     CHECK_WINDOW_MAGIC(window,);
     if (w) {
-        *w = window->w;
+        *w = window->w * 2;
     }
     if (h) {
-        *h = window->h;
+        *h = window->h * 2;
     }
 }
 

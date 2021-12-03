@@ -430,8 +430,8 @@ display_handle_done(void *data,
                                                   ((float) driverdata->physical_height) / 25.4f,
                                                   ((float) driverdata->physical_width) / 25.4f);
     } else {
-        mode.w = driverdata->width / driverdata->scale_factor;
-        mode.h = driverdata->height / driverdata->scale_factor;
+        mode.w = driverdata->width;
+        mode.h = driverdata->height;
 
         driverdata->hdpi = driverdata->physical_width ?
             (((float) driverdata->width) * 25.4f / driverdata->physical_width) :
