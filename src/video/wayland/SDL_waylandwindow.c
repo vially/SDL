@@ -130,7 +130,7 @@ SetFullscreen(SDL_Window *window, struct wl_output *output)
             return; /* Can't do anything yet, wait for ShowWindow */
         }
         if (output) {
-            xdg_toplevel_set_fullscreen(wind->shell_surface.xdg.roleobj.toplevel, output);
+            xdg_toplevel_set_fullscreen(wind->shell_surface.xdg.roleobj.toplevel, NULL);
         } else {
             xdg_toplevel_unset_fullscreen(wind->shell_surface.xdg.roleobj.toplevel);
         }
